@@ -296,7 +296,7 @@ footer p:last-child {
   }
 
   .project-tile a div img {
-    height: calc(100% - 67px);
+    height: 20rem;
     object-fit: cover;
   }
 }
