@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --navbar-bgcolor: #BE3144;
+  --projects-title-bgcolor: #303841;
+  --font-color: #F0F0F0;
+  --welcome-section-bgcolor: #45567D;
+  --navbar-font: "Poppins", sans-serif;
+  --welcome-font: "Raleway", sans-serif;
+}
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  background-color: var(--navbar-bgcolor);
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 500;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.20rem 1.25rem;
+  list-style-type: none;
+}
+
+#navbar ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  padding: 1.25rem 1.35rem;
+  font-family: var(--navbar-font);
+  font-weight: 400;
+}
+
+#navbar ul li a:hover {
+  background-color: var(--welcome-section-bgcolor);
+}
+
+#welcome-section {
+  height: 100vh;
+  background-color: #292A2D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+#welcome-section h1 {
+  font-family: var(--welcome-font);
+  color: var(--font-color);
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+#welcome-section h5 {
+  color: var(--navbar-bgcolor);
+  font-family: var(--navbar-font);
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+
+#projects {
+  background-color: var(--welcome-section-bgcolor);
+  padding: 6rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projects h2 {
+  color: var(--font-color);
+  text-align: center;
+  font-family: var(--welcome-font);
+  font-size: 2.5rem;
+}
+
+#projects hr {
+  margin: 0.3rem 0 3.3rem;
+  height: 1px;
+  background-color: var(--font-color);
+  border: none;
+  max-width: 640px;
+  width: 100%;
+}
+
+.project-tile {
+  margin: 2.5rem 0 3.5rem;
+  max-width: 100%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 0.1rem 0.1rem;
+}
+
+.project-tile a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  color: var(--font-color);
+  background-color: var(--projects-title-bgcolor);
+  padding: 1.25rem 0;
+  font-size: 1.15rem;
+  font-family: var(--navbar-font);
+  font-weight: 400;
+  border-radius: 0 0 0.1rem 0.1rem;
+}
+
+h3 span {
+  color: var(--projects-title-bgcolor);
+  transition: color 0.3s;
+}
+
+.project-tile:hover a div h3 span {
+  color: #ff7f50;
+}
+
+#projects p {
+  display: flex;
+  justify-content: center;
+}
+
+#projects p a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-family: var(--navbar-font);
+  background-color: var(--projects-title-bgcolor);
+  font-size: 1.15rem;
+  padding: 0.5rem 0.9rem 0.5rem 1.15rem;
+  font-weight: 400;
+  border-radius: 0.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-out;
+}
+
+#projects p a ion-icon {
+  font-size: 1.5rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  margin-left: 0.2rem;
+}
+
+#projects p a:hover {
+  background-color: var(--navbar-bgcolor);
+}
+
+#projects p a:hover ion-icon {
+  transform: translateX(0.15rem);
+}
+
+#contact {
+  background-color: var(--projects-title-bgcolor);
+  padding: 0 1rem;
+}
+
+#contact h2, #contact p {
+  text-align: center;
+  color: var(--font-color);
+}
+
+#contact h2 {
+  font-family: var(--welcome-font);
+  font-size: 3.45rem;
+  padding: 5rem 0 0.5rem;
+  line-height: 4.8rem;
+}
+
+#contact p {
+  font-family: var(--navbar-font);
+  margin-top: -0.5rem;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+#contact ul {
+  padding: 2.9rem 0 4.8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 1rem;
+}
+
+#contact ul li {
+  list-style-type: none;
+}
+
+#contact ul li a {
+  display: flex;
+  align-items: center;
+  color: var(--font-color);
+  text-decoration: none;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+#contact ul li a:hover {
+  transform: translateY(0.45rem);
+}
+
+#contact ul li a span {
+  font-family: var(--navbar-font);
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+#contact ul li a ion-icon {
+  font-size: 1.5rem;
+  margin-right: 0.2rem;
+  filter: drop-shadow(2px 2px 1px #1f1f1f);
+}
+
+footer {
+  border-top: 0.3rem solid var(--navbar-bgcolor);
+  background-color: var(--projects-title-bgcolor);
+  padding: 2.5rem;
+  display: flex;
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+footer p, footer p a {
+  color: var(--font-color);
+  font-family: var(--navbar-font);
+  font-weight: 300;
+  transform: scale(1.08, 1);
+}
+
+footer p a {
+  text-decoration: none;
+}
+
+footer p:first-child {
+  flex-grow: 2;
+}
+
+footer p:last-child {
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 730px) {
+  .project-tile {
+    margin: 0;
+  }
+
+  .project-tile:nth-child(1){
+    grid-area: project1;
+  }
+
+  .project-tile:nth-child(2){
+    grid-area: project2;
+  }
+
+  .project-tile:nth-child(3){
+    grid-area: project3;
+  }
+
+  .project-tile:nth-child(4){
+    grid-area: project4;
+  }
+
+  .project-tile:nth-child(5){
+    grid-area: project5;
+  }
+
+  .project-tile:nth-child(6){
+    grid-area: project6;
+  }
+
+  #projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+      "project1 project2"
+      "project3 project4"
+      "project5 project6";
+    gap: 2.2rem 2.25rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .project-tile a div img {
+    height: calc(100% - 67px);
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1090px) {
+  #projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+      "project1 project2 project3"
+      "project4 project5 project6";
+    gap: 2.2rem 2.25rem;
+    margin-bottom: 3.5rem;
+  }
+}
